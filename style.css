@@ -1,7 +1,10 @@
 html{
     height: 100%;
-    min-heighT:100%;
     margin: 0px;
+}
+body{
+    min-heighT:100%;
+    position: relative;
 }
 .header{
 display:grid;
@@ -17,21 +20,20 @@ a{
     font-size:13px;
 }
 h2{
-    position:relative;
-    Top: 100px;
+    position:relative
+    Top: 0px;
     border: 0px;
     margin: 0px;
     padding: 0px;
 }
 .main{
+    position: relative;
+    top: 28%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 70px 70px 200px;
-    margin:0;
-    height: 100%;
-    min-height: 100%;
     width: 100%;
     min-width: 100%;
+    grid-template-rows: 100px 45px 40px 100px;
     grid-template-areas: 
     ". logo ."
     ". searchbar ."
@@ -40,15 +42,37 @@ h2{
 }
 .logo{
     grid-area: logo;
+    align-self: center;
+    justify-self: center;
+  
 }
 .searchbar{
     grid-area: searchbar;
+    width: 100%;
+    height:30px;
+    justify-self: center;
+    align-self: center;
+    border:solid rgba(0, 0 ,0, 0.14);
+    border-radius: 30px;
+    
+}
+.searchbar:hover{
+    box-shadow: 2px 2px 4px gray;
+}
+.searchbar:focus{
+    box-shadow: 2px 2px 4px gray;
+    border:solid rgba(0, 0 ,0, 0.14);
+    border-radius: 30px;
+    outline: none;
 }
 .buttons{
     grid-area: buttons;
+    display: flexbox;
+    justify-self: center;
 }
-.googletext{
+#googletext{
     grid-area: googletext;
+    align-self: flex-start;
 }
 
 }
@@ -66,9 +90,38 @@ button{
     min-width: 54px;
     text-align: center;
 }
+#button1{
+    font-size: 16px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color:rgb(87, 84, 84);;
+}
+#button2{
+    font-size: 16px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color:rgb(87, 84, 84);
+}
+#button1:hover{
+    font-size: 17px;
+    border-radius: 10px;
+
+}
+#button1:hover{
+    font-size: 17px;
+    border-radius: 10px;
+
+}
+#button2:hover{
+}
 p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
+    color:#70757a;
 }
 a:hover{
     text-decoration: underline;
@@ -96,8 +149,19 @@ a:hover{
     justify-self: center;
     align-self:center;
 }
+.country{
+    position: relative;
+    top: 39%
+}
 footer{
+    position: relative;
+    top: 42%;
+    bottom: 0;
+    left:0;
+    height: 10%x;
     display:grid;
     grid-template-columns: 60px 100px 80px 1fr 90px 60px 60px 60px;
-    text-align: left;
+    grid-template-rows: 100px;
+    align-self: flex-end;
+    align-items: flex-end;
 }
